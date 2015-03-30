@@ -12,7 +12,7 @@ var processor = Processor.subscribe({
 
 
 function processSummaryAndSaveViews(vid){
-	user = users[vid];
+	user = users[vid]||{};
   	views.findOne({_id:vid},function(err,view){
     	console.log("Got the View "+view._id);
     	if(users[vid]){
@@ -56,19 +56,7 @@ function processSummaryAndSaveViews(vid){
           		if(ri+1 == rv.length){
           			console.log(view._id+" saving to batch execution.");
           			batch.insert(view);
-          			if(ci.length==0){
-          				console.log("Finally Executing the batch. Cheers");
-          				cb();
-          				/*batch.execute(function(err,result){
-			              if(err){
-			                console.log("Error");
-			                console.log(err);
-			                cb(err)
-			              }
-			              cb();
-			              //d.resolve();
-			            });*/			
-          			}
+          			cb();
           		}
           }
           console.log(vid+" Created");
@@ -124,9 +112,10 @@ function acceptData(message) {
   	Db.MongoClient.connect(databaseUrl,{auto_reconnect: true }, function(err, db) {
 		db.collection('views').find({},{_id:1}).toArray(function(err,data){
 			cacheIds=data;
+			console.log("Got the ids");
 			views = db.collection("views");
 			batch = db.collection("finalViews").initializeUnorderedBulkOp();			
-			async.each(cacheIds,processSummaryAndSaveViews,function(err){
+			async.eachLimit(cacheIds,800,processSummaryAndSaveViews,function(err){
 				console.log("Saving Views");
 				batch.execute(function(err,results){
 
