@@ -11,7 +11,7 @@ var processor = Processor.subscribe({
 
 
 
-function processSummaryAndSaveViews(vid){
+function processSummaryAndSaveViews(vid,cb){
 	user = users[vid]||{};
   	views.findOne({_id:vid},function(err,view){
     	console.log("Got the View "+view._id);
