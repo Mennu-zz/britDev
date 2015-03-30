@@ -1,6 +1,6 @@
 var Q = require('q'),async = require("async"),outlet=0;
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
-var Db = require('mongodb'),db,
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
+var Db = require('mongodb'),
 tempLevel = {
   "region":"national",
   "area":"region",
@@ -27,13 +27,11 @@ var requestInterval = 5000 // 10 secs
 
   // listen to "refreshRequest" for real-time queries
   collector.on('refreshRequest', function (params) { // collectorName is mandarory for refreshers
-  	Db.MongoClient.connect(databaseUrl, function(err, dbConn) {
-    
+
     // if required, check for conditions in params - for eg: caching
     console.log('refreshRequest CALLED', params)
-     db = dbConn;
+     
     collector.request() // {} and collectorName mandarory for refreshers
-  	});
   })
 
 
@@ -108,8 +106,7 @@ var requestInterval = 5000 // 10 secs
         id: Date.now(),
         body: message.body,
         final : final,
-        parentLevel : parentLevel,
-        db : db
+        parentLevel : parentLevel
       })
 
     })

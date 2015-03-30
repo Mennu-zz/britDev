@@ -59,7 +59,7 @@ function dataAcceptor(err, data, reqOptions) {
 /************* developer code after this line **************/
 
 var Q = require('q'),async = require("async"),outlet=0;
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
 var Db = require('mongodb'),
 tempLevel = {
   "region":"national",
@@ -70,7 +70,7 @@ tempLevel = {
   "salesman":"distributor",
   "outlet":"salesman"
 },   MongoClient = require('mongodb').MongoClient,
-    Server = require('mongodb').Server;
+    Server = require('mongodb').Server,db;
 //var db = new Db('cw-api', new Server('localhost', 27017),{safe: false, strict: false});
 var requestInterval = 5000 // 10 secs
 //var fetchUrl = "http://115.249.190.247:8080/uCLMS/salesData?APIKey=hgd832384234&backlogin=1&";
@@ -87,11 +87,17 @@ var requestInterval = 5000 // 10 secs
 
   // listen to "refreshRequest" for real-time queries
   collector.on('refreshRequest', function (params) { // collectorName is mandarory for refreshers
-
-    // if required, check for conditions in params - for eg: caching
-    console.log('refreshRequest CALLED', params)
-     
-    collector.request() // {} and collectorName mandarory for refreshers
+	Db.MongoClient.connect(databaseUrl, function(err, dbConn) {
+    	
+    	db = dbConn;
+    	/*db.collection("collectors").insert({stat :"Started at "+Date.now()},function(err,res){
+    			
+    	});*/
+    	console.log('refreshRequest CALLED', params)
+	     
+	    collector.request()
+	    
+	});
   })
 
 
@@ -161,11 +167,13 @@ var requestInterval = 5000 // 10 secs
 	    });	
     }
     process.nextTick(function () {
-    	//console.log("ticking "+outlet);
+    	console.log("ticking "+outlet);
+      //console.log(db);
       d.resolve({
         id: Date.now(),
         body: message.body,
         final : final,
+        dbConn : JSON.stringify(db),
         parentLevel : parentLevel
       })
 

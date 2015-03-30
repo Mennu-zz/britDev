@@ -1,5 +1,12 @@
 refreshRequest CALLED name=YAhoo&age=23
+ticking 0
 refreshRequest CALLED name=YAhoo&age=23
-Ending Extracting Collector @ 1427354784691
-refreshRequest CALLED name=YAhoo&age=23
-Ending Extracting Collector @ 1427360103217
+ticking 0
+
+/home/naveen/britDev/collector-service/sampleTry/.collector:176
+        dbConn : JSON.stringify(db),
+                      ^
+TypeError: Converting circular structure to JSON
+    at Object.stringify (native)
+    at /home/naveen/britDev/collector-service/sampleTry/.collector:176:23
+    at process._tickCallback (node.js:415:13)

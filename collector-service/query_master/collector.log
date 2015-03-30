@@ -19,3 +19,27 @@ Data recieved at 1427358380809
 Time Taken 0.9691333333333333 mins
 17900
 Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427696380470
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427696412147
+Time Taken 0.52795 mins
+17924
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427696858553
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427696885271
+Time Taken 0.4453 mins
+17924
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427696904118
+refreshRequest CALLED startedAt=1427697004912
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427697037170
+Time Taken 0.5376333333333333 mins
+17924
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427697139109
+refreshRequest CALLED startedAt=1427697218225
+refreshRequest CALLED startedAt=1427697319514
+refreshRequest CALLED startedAt=1427697765330
+refreshRequest CALLED startedAt=1427697882026
