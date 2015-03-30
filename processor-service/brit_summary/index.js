@@ -10,7 +10,7 @@ var processor = Processor.subscribe({
 })
 
 function processSummaryAndSaveViews(){
-	var d = q.defer();
+	var d = Q.defer();
 	if(cacheIds && users){
 		ci = cacheIds;
 		Db.MongoClient.connect(databaseUrl,{auto_reconnect: true }, function(err, db) {
