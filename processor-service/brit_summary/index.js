@@ -19,9 +19,10 @@ function processSummaryAndSaveViews(){
 			var batch = db.collection("views").initializeUnorderedBulkOp();
 			//for(i=0;i<ci.length;ci++){
 			while(ci.length>0){
-				var vid = ci.splice(0,1)._id;
-				console.log(vid);
-		        (function(vid){
+				var id = ci.splice(0,1);
+				console.log(id);
+				var vid = id._id;
+				(function(vid){
 		        	user = users[vid];
 		          	views.findOne({_id:vid},function(err,view){
 		            	console.log("Got the View "+view._id);
@@ -50,6 +51,7 @@ function processSummaryAndSaveViews(){
 				          	for(ri=0;ri<rv.length;ri++){
 				            //reportee's level and code
 				            tmpcache = rv[ri];
+				            console.log("Reportee : "+tmpcache._id);
 				            //tmpcache = cache[reportee[ri]["vpath"]];
 				            //tmpcache = heirarchy.findOne({vid:vid});
 				            sales = [user["name"]||""];
