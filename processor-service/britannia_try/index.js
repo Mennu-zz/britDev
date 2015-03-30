@@ -1,5 +1,5 @@
 var Q = require('q'),async = require('async'),britCache = [];//britCache = {};
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api",db=null;
 var Db = require('mongodb'),loki = require('lokijs'),db1 = new loki('/home/naveen/heirarchy.json'),
 dateSuffix = [ "null","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "th", "th", "th", "th", "th", "th", "th", "th", "th","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "st" ];
 
@@ -192,12 +192,12 @@ function processReportee(data){
 function processObjects(message){
   var d = Q.defer();
   //console.log(message);
-  Db.MongoClient.connect(databaseUrl, function(err, db) {
+  //Db.MongoClient.connect(databaseUrl, function(err, db) {
     //console.log(err);
-    if(err) {
-    	console.log(err);
-    	throw err;
-    }
+    //if(err) {
+    //	console.log(err);
+    //	throw err;
+    //}
     var body = JSON.parse(message.body.body)["data"];
     var parentLevel = message.body.parentLevel;
 
@@ -295,7 +295,7 @@ function processObjects(message){
 	      .then(taillingProcessReportee)
       })(i);
     }
-  });
+  //});
   return d.promise;
 }
 
@@ -304,10 +304,15 @@ function processObjects(message){
 function acceptData(message,headers) {
   var d = Q.defer()
   var body  = message.body;
+  if(!db){
+  	db = body.db;	
+  }
   processObjects(message).then(function(msg){
     //console.log(msg);
     if(body.final){
     	console.log("Processing Extracted Data Done");
+    	db.close();
+    	console.log("Closing DB");
     	//[todo]
     	//maping user to view
     	d.resolve({msg:msg,note:"cache",final:body.final,cache:britCache});
