@@ -1,5 +1,5 @@
 var Q = require('q'),async = require('async'),britCache = [];//britCache = {};
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api",db=null;
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1",db=null;
 var Db = require('mongodb'),loki = require('lokijs'),db1 = new loki('/home/naveen/heirarchy.json'),
 dateSuffix = [ "null","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "th", "th", "th", "th", "th", "th", "th", "th", "th","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "st" ];
 
