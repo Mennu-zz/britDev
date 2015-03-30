@@ -19,10 +19,12 @@ function processSummaryAndSaveViews(){
 			var batch = db.collection("views").initializeUnorderedBulkOp();
 			//for(i=0;i<ci.length;ci++){
 			while(ci.length>0){
-				var vid = ci.splice(0,1);
+				var vid = ci.splice(0,1)._id;
+				console.log(vid);
 		        (function(vid){
 		        	user = users[vid];
 		          	views.findOne({_id:vid},function(err,view){
+		            	console.log("Got the View "+view._id);
 		            	if(users[vid]){
 				            view.processedData.username = user["staff-name"]
 				            view.processedData.email = user["staff-email"]
@@ -62,8 +64,10 @@ function processSummaryAndSaveViews(){
 				                view.processedData.body[1].content[1].data.push(dist);
 				                view.processedData.body[1].content[2].data.push(edge);
 				          		if(ri+1 == rv.length){
+				          			console.log(view._id+" saving to batch execution.");
 				          			batch.insert(view);
 				          			if(ci.length==0){
+				          				console.log("Finally Executing the batch. Cheers");
 				          				batch.execute(function(err,result){
 							              if(err){
 							                console.log("Error");
@@ -102,15 +106,20 @@ function acceptData(message) {
   	}
   }
   //console.log(count);
-  if(count > 0 && count%2 == 0){
+  if(count ==1){
   	//start generating summary
   	console.log("Starting the Summary");
   	count=0;
-
-  	processSummaryAndSaveViews().then(function(){
-  		console.log("Views processed and saved. Done for the day.");
-  		d.resolve();
-  	})
+  	Db.MongoClient.connect(databaseUrl,{auto_reconnect: true }, function(err, db) {
+		db.collection('views').find({},{_id:1}).toArray(function(err,data){
+			cacheIds=data;			
+			processSummaryAndSaveViews().then(function(){
+		  		console.log("Views processed and saved. Done for the day.");
+		  		d.resolve();
+		  	})
+		});
+	});
+  	
 
   	//As this is the final call prepare the final status and send a mail ..zi!!!
   }
