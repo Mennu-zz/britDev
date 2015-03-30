@@ -1,0 +1,108 @@
+
+var Collector = require('/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api')(dataAcceptor)
+
+function dataAcceptor(err, data, reqOptions) {
+
+  var collectorName = __dirname.split('/').slice(-1)[0]
+  var message
+
+  if (err) {
+    //console.log(data)
+    message = {
+      code: 1,
+      body: err
+    }
+    process.send(message)
+  }
+  else {
+
+    if (acceptData) {
+
+      var msg = {
+        origin: {
+          type: 'collector',
+          name: collectorName
+        },
+        body: data,
+        time: Date.now()
+      }
+
+      acceptData(err, msg, reqOptions).then(
+
+        function (resolved) {
+          //console.log(resolved)
+          message = {
+            code: 0,
+            body: resolved
+          }
+          process.send(message)
+        },
+
+        function (err) {
+          //console.log(err)
+          message = {
+            code: 1,
+            body: err
+          }
+          process.send(message)
+        }
+      )
+    }
+    else {
+      throw new Error('acceptData not defined')
+    }
+
+  }
+
+}
+
+/************* developer code after this line **************/
+
+var Q = require('q')
+var requestInterval = 10000 // 5 secs
+
+var collector = Collector.pull({
+  flexible: false, // excdepr for scenario every field can be changed with subsqequent queries, defaults to false
+  scenario: 'us-airports', // scenario
+  path: 'http://services.faa.gov/airport/status/LAX', //path
+  method: 'get', // request method, default is get
+  query: 'format=application/json', // any query params
+  body: ''
+})
+
+// if flexible == false: params query and body can be changed with subsequent queries, others cannot
+
+setInterval(function () {
+  //console.log('Collector making request')
+  collector.request() // making the request here
+}, requestInterval)
+
+// acceptData function is mandatory, has access to the res object for extra details
+// it MUST return a promise, use whatever
+function acceptData(message) {
+
+  console.log('LAX COLLECTOR DATA')
+  console.log(message)
+  console.log('--------------------------')
+  console.log(message.origin) // WILL NOT BE AUTO-CONVERTED, STRINGIFY YOUR SELF!
+  console.log('--------------------------')
+  console.log(message.body)
+  console.log('--------------------------')
+  console.log(message.time)
+  console.log('\n**************************\n')
+
+  var d = Q.defer()
+
+  process.nextTick(function () {
+
+    d.resolve({
+      updateTime: Date.now(),
+      scenario: 'us-airports-lax',
+      body: message
+    })
+
+  })
+
+  return d.promise
+}
+

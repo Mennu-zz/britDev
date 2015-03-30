@@ -1,0 +1,79 @@
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'q'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/naveen/cw-command/test/collector-service/us-airport-sfo/.collector:61:9)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'q'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/naveen/cw-command/test/collector-service/us-airport-sfo/.collector:61:9)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'q'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/naveen/cw-command/test/collector-service/us-airport-sfo/.collector:61:9)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+LOL GTFO
+{ body: '',
+  method: 'get',
+  uri: 'http://services.faa.gov/airport/status/SFO?format=application/json' }
+SFO COLLECTOR REFRESH DATA
+{ origin: { type: 'collector', name: 'us-airport-sfo' },
+  body: '{"delay":"false","IATA":"SFO","state":"California","name":"San Francisco International","weather":{"visibility":10.00,"weather":"A Few Clouds","meta":{"credit":"NOAA\'s National Weather Service","updated":"3:56 AM Local","url":"http://weather.gov/"},"temp":"54.0 F (12.2 C)","wind":"North at 0.0mph"},"ICAO":"KSFO","city":"San Francisco","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+  time: 1426160112938 }
+--------------------------
+{ type: 'collector', name: 'us-airport-sfo' }
+--------------------------
+{"delay":"false","IATA":"SFO","state":"California","name":"San Francisco International","weather":{"visibility":10.00,"weather":"A Few Clouds","meta":{"credit":"NOAA's National Weather Service","updated":"3:56 AM Local","url":"http://weather.gov/"},"temp":"54.0 F (12.2 C)","wind":"North at 0.0mph"},"ICAO":"KSFO","city":"San Francisco","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} 
+--------------------------
+1426160112938
+
+**************************
+
+LOL GTFO
+{ body: '',
+  method: 'get',
+  uri: 'http://services.faa.gov/airport/status/SFO?format=application/json' }
+SFO COLLECTOR REFRESH DATA
+{ origin: { type: 'collector', name: 'us-airport-sfo' },
+  body: '{"delay":"false","IATA":"SFO","state":"California","name":"San Francisco International","weather":{"visibility":10.00,"weather":"A Few Clouds","meta":{"credit":"NOAA\'s National Weather Service","updated":"3:56 AM Local","url":"http://weather.gov/"},"temp":"54.0 F (12.2 C)","wind":"North at 0.0mph"},"ICAO":"KSFO","city":"San Francisco","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+  time: 1426160143535 }
+--------------------------
+{ type: 'collector', name: 'us-airport-sfo' }
+--------------------------
+{"delay":"false","IATA":"SFO","state":"California","name":"San Francisco International","weather":{"visibility":10.00,"weather":"A Few Clouds","meta":{"credit":"NOAA's National Weather Service","updated":"3:56 AM Local","url":"http://weather.gov/"},"temp":"54.0 F (12.2 C)","wind":"North at 0.0mph"},"ICAO":"KSFO","city":"San Francisco","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} 
+--------------------------
+1426160143535
+
+**************************
+

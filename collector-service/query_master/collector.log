@@ -1,0 +1,21 @@
+refreshRequest CALLED startedAt=1427330863278
+refreshRequest CALLED startedAt=1427331131042
+refreshRequest CALLED startedAt=1427331175089
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427331228953
+Time Taken 0.89775 mins
+17900
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427352501452
+refreshRequest CALLED startedAt=1427352552186
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427352632257
+Time Taken 1.3345333333333333 mins
+17900
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427358322661
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427358380809
+Time Taken 0.9691333333333333 mins
+17900
+Summary Processor getting invoked

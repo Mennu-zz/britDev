@@ -1,0 +1,1065 @@
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+LAX COLLECTOR DATA
+null
+--------------------------
+
+TypeError: Cannot read property 'origin' of null
+    at acceptData (/home/naveen/test/collector-service/us-airport-lax/.collector:87:22)
+    at dataAcceptor (/home/naveen/test/collector-service/us-airport-lax/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16

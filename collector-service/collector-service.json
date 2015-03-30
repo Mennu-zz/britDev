@@ -1,0 +1,5 @@
+{
+  "port": 9090,
+  "signature": "GHJGAYTA567867GJH",
+  "exclude": ["britannia-heirarchy", "sap-po","us-airport-lax","us-airport-sfo"]
+}

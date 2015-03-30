@@ -1,0 +1,74 @@
+
+var Processor = require('/usr/local/lib/node_modules/cw-command/node_modules/cw-service-processor/lib/api')
+
+process.on('message', function (ipcMessage) {
+
+  var message
+
+  if (acceptData) {
+
+    acceptData(ipcMessage).then(
+
+      function (resolved) {
+
+        message = {
+          code: 0,
+          body: resolved
+        }
+        process.send(message)
+
+      },
+
+      function (fail) {
+        message = {
+          code: 1,
+          body: fail
+        }
+        process.send(message)
+      }
+    )
+  }
+
+  else {
+    console.log('acceptData not defined')
+  }
+
+})
+
+
+
+
+var Q = require('q')
+
+var processor = Processor.subscribe({
+  channels: ['collector:pull:us-airport-lax']// can listen to multiple channels
+})
+
+// function is mandatory, has access to the req object for extra details
+// it MUST return a promise, use whatever
+function acceptData(message) {
+
+  console.log(message)
+  console.log('--------------------------')
+  console.log(message.origin) // WILL NOT BE AUTO-CONVERTED, STRINGIFY YOUR SELF!
+  console.log('--------------------------')
+  console.log(message.body)
+  console.log('--------------------------')
+  console.log(message.time)
+  console.log('\n**************************\n')
+
+  var d = Q.defer()
+
+  process.nextTick(function () {
+
+    console.log('--- STORED LAX DATA ---')
+    console.log(message)
+    d.resolve({
+      airport: 'LAX',
+      parinam: message.body // WILL NOT BE AUTO-CONVERTED, STRINGIFY YOUR SELF!
+    }) // resolve, else others will not be able to listen to it
+
+  })
+
+  return d.promise
+}

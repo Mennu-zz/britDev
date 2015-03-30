@@ -1,0 +1,440 @@
+
+module.js:340
+    throw err;
+          ^
+Error: Cannot find module 'q'
+    at Function.Module._resolveFilename (module.js:338:15)
+    at Function.Module._load (module.js:280:25)
+    at Module.require (module.js:364:17)
+    at require (module.js:380:17)
+    at Object.<anonymous> (/home/naveen/test/processor-service/views-consolidator/.processor:41:9)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498700655,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498700695 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498700655,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498700650 } } }
+--------------------------
+1426498700695
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498710695,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498710711 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498710695,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498710689 } } }
+--------------------------
+1426498710711
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498720619,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498720647 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498720619,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498720608 } } }
+--------------------------
+1426498720647
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498740666,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498740691 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498740666,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498740664 } } }
+--------------------------
+1426498740691
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498750663,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498750674 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498750663,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498750651 } } }
+--------------------------
+1426498750674
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498760743,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498760748 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498760743,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498760742 } } }
+--------------------------
+1426498760748
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498770680,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498770714 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498770680,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498770668 } } }
+--------------------------
+1426498770714
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498780800,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498780828 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498780800,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498780798 } } }
+--------------------------
+1426498780828
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498790987,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498790999 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498790987,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498790983 } } }
+--------------------------
+1426498790999
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498800759,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498800766 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498800759,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498800757 } } }
+--------------------------
+1426498800766
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498814652,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498814729 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498814652,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498814644 } } }
+--------------------------
+1426498814729
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498824691,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498824699 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498824691,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498824684 } } }
+--------------------------
+1426498824699
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426498840765,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426498840794 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426498840765,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426498840761 } } }
+--------------------------
+1426498840794
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426500058887,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426500058944 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426500058887,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426500058880 } } }
+--------------------------
+1426500058944
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426500068813,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426500068826 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426500068813,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426500068809 } } }
+--------------------------
+1426500068826
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426500078882,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426500078891 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426500078882,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426500078881 } } }
+--------------------------
+1426500078891
+
+**************************
+
+--- CONSOLIDATOR ---
+{ body: 
+   { airport: 'LAX',
+     parinam: 
+      { updateTime: 1426500282472,
+        scenario: 'us-airports-lax',
+        body: [Object] } },
+  origin: { type: 'processor', name: 'processor:us-airports-lax' },
+  time: 1426500282527 }
+--------------------------
+{ type: 'processor', name: 'processor:us-airports-lax' }
+--------------------------
+{ airport: 'LAX',
+  parinam: 
+   { updateTime: 1426500282472,
+     scenario: 'us-airports-lax',
+     body: 
+      { origin: [Object],
+        body: '{"delay":"false","IATA":"LAX","state":"California","name":"Los Angeles International","weather":{"visibility":10.00,"weather":"Mostly Cloudy","meta":{"credit":"NOAA\'s National Weather Service","updated":"1:53 AM Local","url":"http://weather.gov/"},"temp":"67.0 F (19.4 C)","wind":"East at 5.8mph"},"ICAO":"KLAX","city":"Los Angeles","status":{"reason":"No known delays for this airport.","closureBegin":"","endTime":"","minDelay":"","avgDelay":"","maxDelay":"","closureEnd":"","trend":"","type":""}} ',
+        time: 1426500282468 } } }
+--------------------------
+1426500282527
+
+**************************
+
+--- CONSOLIDATOR ---
