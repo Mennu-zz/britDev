@@ -19,7 +19,7 @@ function processSummaryAndSaveViews(){
 			var batch = db.collection("views").initializeUnorderedBulkOp();
 			//for(i=0;i<ci.length;ci++){
 			while(ci.length>0){
-				var id = ci.splice(0,1);
+				var id = ci.splice(0,1)[0];
 				console.log(id);
 				var vid = id._id;
 				(function(vid){
