@@ -1,5 +1,5 @@
 var Q = require('q'),
-    count = 0,
+    processCount = 0,
     cacheIds, users, views, batch, async = require('async');
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
 var Db = require('mongodb');
@@ -11,87 +11,92 @@ var processor = Processor.subscribe({
 
 
 function processSummaryAndSaveViews(vid, cb) {
-    user = users[vid._id] || {};
-    views.findOne({
-        _id: vid._id
-    }, function(err, v) {
-        view = v;
-        count++;
-        //console.log("Got the View "+view._id);
-        if (user) {
-            view.processedData.username = user["staff-name"]
-            view.processedData.email = user["staff-email"]
-            view.processedData.level = user.level
-            view.processedData.code = user.code
-            view.processedData.primarySales = Math.ceil(Number(user.primarySales) / 1000)
-            view.processedData.isSalesManOnGprs = user.is_sm_on_gprs
-            view.processedData.firstHalfAttended = user.first_half_attend
-            view.processedData.firstHalfOrders = user.first_half_orders
-            view.processedData.secondHalfAttended = user.sec_half_attend
-            view.processedData.secondHalfOrders = user.sec_half_orders
-            view.processedData.isProcessed = false
-            view.processedData.key = user.level + ":" + user.code
-            view.processedData.parentCode = user["parent-code"]
-            view.processedData.parentLevel = user["parent-level"]
-            view.processedData.name = user["name"]
-            if (user.level == 'distributor') {
-                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
-            }
-        }
-        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
-            views.find({
-                _id: {
-                    $in: view.reporteeQuery
-                }
-            }, {
-                _id: 1,
-                "tmpSummary": 1
-            }).toArray(function(err, rv) {
-            	while(rv.length>0){
-            		tmpcache = rv.shift();
-            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
-                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-                    sales.push(tmpcache.tmpSummary.sales.BCR);
-                    sales.push(tmpcache.tmpSummary.sales.Dairy);
-                    dist.push(tmpcache.tmpSummary.dist.ECO);
-                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
-                    edge.push(tmpcache.tmpSummary.edge.TLSD);
-                    view.processedData.body[1].content[0].data.push(sales);
-                    view.processedData.body[1].content[1].data.push(dist);
-                    view.processedData.body[1].content[2].data.push(edge);
-                	
-                    if(rv.length==0){
-                    	console.log(view._id + " saving to batch execution. :"+count);
-		                batch.insert(view);
-		                if (count > 25000) {
-		                    count=0;
-		                    batch.execute(function(err, res) {
-		                        if (err) {throw err;}
-		                        cb();
-		                    });
-		                } else {
-		                    cb();
-		                }	
-                    }
-            	}
-            });
-        } else {
-        	count++;
-            console.log(view._id + " saving to batch execution. :"+count);
-            batch.insert(view);
-            if (count > 25000) {
-            	count = 0;
-                batch.execute(function(err, res) {
-                    if (err) throw err;
-                    
-                    cb();
-                })
-            } else {
-                cb();
-            }
-        }
-    });
+    (function(vid){
+    	user = users[vid._id] || {};
+	    views.findOne({
+	        _id: vid._id
+	    }, function(err, v) {
+	        view = v;
+	        processCount++;
+	        console.log("Got the View "+view._id);
+	        console.log("Step 1 :"+view._id);
+	        if (user) {
+	            view.processedData.username = user["staff-name"]
+	            view.processedData.email = user["staff-email"]
+	            view.processedData.level = user.level
+	            view.processedData.code = user.code
+	            view.processedData.primarySales = Math.ceil(Number(user.primarySales) / 1000)
+	            view.processedData.isSalesManOnGprs = user.is_sm_on_gprs
+	            view.processedData.firstHalfAttended = user.first_half_attend
+	            view.processedData.firstHalfOrders = user.first_half_orders
+	            view.processedData.secondHalfAttended = user.sec_half_attend
+	            view.processedData.secondHalfOrders = user.sec_half_orders
+	            view.processedData.isProcessed = false
+	            view.processedData.key = user.level + ":" + user.code
+	            view.processedData.parentCode = user["parent-code"]
+	            view.processedData.parentLevel = user["parent-level"]
+	            view.processedData.name = user["name"]
+	            if (user.level == 'distributor') {
+	                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
+	            }
+	        }
+	        console.log("Step 2 :"+view._id);
+	        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
+	            views.find({
+	                _id: {
+	                    $in: view.reporteeQuery
+	                }
+	            }, {
+	                _id: 1,
+	                "tmpSummary": 1
+	            }).toArray(function(err, rv) {
+	            	console.log("Step 3 :"+view._id);
+	            	while(rv.length>0){
+	            		tmpcache = rv.shift();
+	            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
+	                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+	                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+	                    sales.push(tmpcache.tmpSummary.sales.BCR);
+	                    sales.push(tmpcache.tmpSummary.sales.Dairy);
+	                    dist.push(tmpcache.tmpSummary.dist.ECO);
+	                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
+	                    edge.push(tmpcache.tmpSummary.edge.TLSD);
+	                    view.processedData.body[1].content[0].data.push(sales);
+	                    view.processedData.body[1].content[1].data.push(dist);
+	                    view.processedData.body[1].content[2].data.push(edge);
+	                	
+	                    if(rv.length==0){
+	                    	console.log("Step 4 :"+view._id);
+	                    	console.log(view._id + " saving to batch execution. :"+processCount);
+			                batch.insert(view);
+			                if (processCount > 25000) {
+			                    processCount=0;
+			                    batch.execute(function(err, res) {
+			                        if (err) {throw err;}
+			                        cb();
+			                    });
+			                } else {
+			                    cb();
+			                }	
+	                    }
+	            	}
+	            });
+	        } else {
+	        	console.log("Step 3.1 :"+view._id);
+	        	console.log(view._id + " saving to batch execution. :"+processCount);
+	            batch.insert(view);
+	            if (count > 25000) {
+	            	count = 0;
+	                batch.execute(function(err, res) {
+	                    if (err) {console.log(err);}
+	                    cb();
+	                })
+	            } else {
+	                cb();
+	            }
+	        }
+	    });
+    })(vid);
 }
 
 
@@ -105,7 +110,7 @@ function acceptData(message) {
         count++;
         if (message.body.note == "cache") {
             console.log("Got Final Signal from Cache Data");
-            //heirarchy = db1.loadCollection( {name:"children"} )
+            //heirarchy = db1.loa dCollection( {name:"children"} )
             //cacheIds = message.body.cache //,users
         } else {
             console.log("Got Users data");
