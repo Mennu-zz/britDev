@@ -1,5 +1,5 @@
 var Q = require('q'),
-    processCount = 0,
+    processCount = 0,count=0,
     cacheIds, users, views, batch, async = require('async');
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
 var Db = require('mongodb');
@@ -85,8 +85,8 @@ function processSummaryAndSaveViews(vid, cb) {
 	        	console.log("Step 3.1 :"+view._id);
 	        	console.log(view._id + " saving to batch execution. :"+processCount);
 	            batch.insert(view);
-	            if (count > 25000) {
-	            	count = 0;
+	            if (processCount > 25000) {
+	            	processCount = 0;
 	                batch.execute(function(err, res) {
 	                    if (err) {console.log(err);}
 	                    cb();
@@ -118,7 +118,7 @@ function acceptData(message) {
         }
     }
     //console.log(count);
-    if (count == 2) {
+    if (count == 1) {
         //start generating summary
         console.log("Starting the Summary @ "+Date.now());
         count = 0;
