@@ -12,10 +12,10 @@ var processor = Processor.subscribe({
 
 
 function processSummaryAndSaveViews(vid,cb){
-	user = users[vid]||{};
-  	views.findOne({_id:vid},function(err,view){
+	user = users[vid._id]||{};
+  	views.findOne({_id:vid._id},function(err,view){
     	console.log("Got the View "+view._id);
-    	if(users[vid]){
+    	if(user){
             view.processedData.username = user["staff-name"]
             view.processedData.email = user["staff-email"]
             view.processedData.level = user.level
@@ -59,7 +59,7 @@ function processSummaryAndSaveViews(vid,cb){
           			cb();
           		}
           }
-          console.log(vid+" Created");
+          console.log(vid._id+" Created");
           });
     });
 }
@@ -112,14 +112,15 @@ function acceptData(message) {
   	Db.MongoClient.connect(databaseUrl,{auto_reconnect: true }, function(err, db) {
 		db.collection('views').find({},{_id:1}).toArray(function(err,data){
 			cacheIds=data;
-			console.log("Got the ids");
+			console.log("Got the ids, total : "+cacheIds.length);
 			views = db.collection("views");
 			batch = db.collection("finalViews").initializeUnorderedBulkOp();			
+			
 			async.eachLimit(cacheIds,800,processSummaryAndSaveViews,function(err){
 				console.log("Saving Views");
 				batch.execute(function(err,results){
-
-				})
+					console.log("Views Generated");
+				});
 			});			
 		});
 	});
