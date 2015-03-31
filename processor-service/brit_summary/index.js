@@ -16,6 +16,7 @@ function processSummaryAndSaveViews(vid, cb) {
         _id: vid._id
     }, function(err, v) {
         view = v;
+        count++;
         //console.log("Got the View "+view._id);
         if (user) {
             view.processedData.username = user["staff-name"]
@@ -46,13 +47,9 @@ function processSummaryAndSaveViews(vid, cb) {
                 _id: 1,
                 "tmpSummary": 1
             }).toArray(function(err, rv) {
-                for (ri = 0; ri < rv.length; ri++) {
-                    //reportee's level and code
-                    tmpcache = rv[ri];
-                    //console.log("Reportee : "+tmpcache._id);
-                    //tmpcache = cache[reportee[ri]["vpath"]];
-                    //tmpcache = heirarchy.findOne({vid:vid});
-                    sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
+            	while(rv.length>0){
+            		tmpcache = rv.shift();
+            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
                     dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
                     edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
                     sales.push(tmpcache.tmpSummary.sales.BCR);
@@ -63,36 +60,21 @@ function processSummaryAndSaveViews(vid, cb) {
                     view.processedData.body[1].content[0].data.push(sales);
                     view.processedData.body[1].content[1].data.push(dist);
                     view.processedData.body[1].content[2].data.push(edge);
-                    /*if (ri + 1 >= rv.length) {
-                        count++;
-                        console.log(view._id + " saving to batch execution. :"+count);
-                        batch.insert(view);
-                        if (count > 10000) {
-                            count=0;
-                            batch.execute(function(err, res) {
-                                if (err) {throw err;}
-                                
-                                cb();
-                            });
-                        } else {
-                            cb();
-                        }
-                    }*/
-                }
-                count++;
-                console.log(view._id + " saving to batch execution. :"+count);
-                batch.insert(view);
-                if (count > 25000) {
-                    count=0;
-                    batch.execute(function(err, res) {
-                        if (err) {throw err;}
-                        
-                        cb();
-                    });
-                } else {
-                    cb();
-                }
-                //console.log(vid._id+" Created");
+                	
+                    if(rv.length==0){
+                    	console.log(view._id + " saving to batch execution. :"+count);
+		                batch.insert(view);
+		                if (count > 25000) {
+		                    count=0;
+		                    batch.execute(function(err, res) {
+		                        if (err) {throw err;}
+		                        cb();
+		                    });
+		                } else {
+		                    cb();
+		                }	
+                    }
+            	}
             });
         } else {
         	count++;
