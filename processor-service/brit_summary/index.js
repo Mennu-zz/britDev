@@ -63,7 +63,7 @@ function processSummaryAndSaveViews(vid, cb) {
                     view.processedData.body[1].content[0].data.push(sales);
                     view.processedData.body[1].content[1].data.push(dist);
                     view.processedData.body[1].content[2].data.push(edge);
-                    if (ri + 1 >= rv.length) {
+                    /*if (ri + 1 >= rv.length) {
                         count++;
                         console.log(view._id + " saving to batch execution. :"+count);
                         batch.insert(view);
@@ -77,7 +77,20 @@ function processSummaryAndSaveViews(vid, cb) {
                         } else {
                             cb();
                         }
-                    }
+                    }*/
+                }
+                count++;
+                console.log(view._id + " saving to batch execution. :"+count);
+                batch.insert(view);
+                if (count > 25000) {
+                    count=0;
+                    batch.execute(function(err, res) {
+                        if (err) {throw err;}
+                        
+                        cb();
+                    });
+                } else {
+                    cb();
                 }
                 //console.log(vid._id+" Created");
             });
