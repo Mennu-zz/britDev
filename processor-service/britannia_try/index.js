@@ -170,7 +170,7 @@ function processReportee(data){
 	    title: 'Reportee',
 	    name: 'reporteedata',
 	    content: []
-	  },reporteeQuery=[];
+	  },reporteeQuery=[],reporteeNames={};
 	var reportee = data.reporteedata;
 	if(reportee){
 		while(reportee.length>0){
@@ -179,8 +179,9 @@ function processReportee(data){
 			report["vpath"] = report["level"]+":"+report["code"];
 			subviews.content.push(report);
 			reporteeQuery.push(report["vpath"]);
+			reporteeNames[report["vpath"]] = report["user"];
 			if(reportee.length==0){
-				d.resolve({reportee:subviews,reporteeQuery:reporteeQuery});
+				d.resolve({reportee:subviews,reporteeQuery:reporteeQuery,reporteeNames:reporteeNames});
 			}
 		}
 	}else{
@@ -272,9 +273,10 @@ function processObjects(message){
 			      		tmpSummary : processedData.tmpSummary,
 			      		rawData : processedData.rawData,
 			      		processedData : processedData,
-			      		reporteeQuery : data.reporteeQuery
+			      		reporteeQuery : data.reporteeQuery,
+			      		reporteeNames : data.reporteeNames
 			      	};//reporteeQuery
-              britCache.push(view.vid);
+              //britCache.push(view.vid);
               //britCache[view._id] = view;
 			      	batch.insert(view);
 			      	//console.log("View Created : "+view.id);

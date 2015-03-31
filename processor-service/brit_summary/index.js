@@ -3,10 +3,6 @@ var Q = require('q'),
     cacheIds, users, views, batch, async = require('async');
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
 var Db = require('mongodb');
-
-
-var loki = require('lokijs'),
-    db1 = new loki('/home/naveen/heirarchy.json');
 var heirarchy;
 var processor = Processor.subscribe({
     channels: ['processor:britannia_try', 'collector:pull:query_master'] // can listen to multiple channels
@@ -57,9 +53,9 @@ function processSummaryAndSaveViews(vid, cb) {
                     //console.log("Reportee : "+tmpcache._id);
                     //tmpcache = cache[reportee[ri]["vpath"]];
                     //tmpcache = heirarchy.findOne({vid:vid});
-                    sales = [user["name"] || ""];
-                    dist = [user["name"] || ""];
-                    edge = [user["name"] || ""];
+                    sales = [user["name"] || view.reporteeNames[tmpCache._id]];
+                    dist = [user["name"] ||  view.reporteeNames[tmpCache._id]];
+                    edge = [user["name"] ||  view.reporteeNames[tmpCache._id]];
                     sales.push(tmpcache.tmpSummary.sales.BCR);
                     sales.push(tmpcache.tmpSummary.sales.Dairy);
                     dist.push(tmpcache.tmpSummary.dist.ECO);
@@ -69,7 +65,7 @@ function processSummaryAndSaveViews(vid, cb) {
                     view.processedData.body[1].content[1].data.push(dist);
                     view.processedData.body[1].content[2].data.push(edge);
                     if (ri + 1 == rv.length) {
-                        console.log(view._id + " saving to batch execution.");
+                        console.log(view._id + " saving to batch execution. :"+count);
                         batch.insert(view);
                         if (count > 10000) {
                             count=0;
@@ -85,7 +81,7 @@ function processSummaryAndSaveViews(vid, cb) {
                 //console.log(vid._id+" Created");
             });
         } else {
-            console.log(view._id + " saving to batch execution.");
+            console.log(view._id + " saving to batch execution. :"+count);
             batch.insert(view);
             if (count > 25000) {
             	count = 0;
@@ -101,28 +97,6 @@ function processSummaryAndSaveViews(vid, cb) {
 }
 
 
-/*function processSummaryAndSaveViews_old(){
-	var d = Q.defer();
-	if(cacheIds && users){
-		ci = cacheIds;
-		Db.MongoClient.connect(databaseUrl,{auto_reconnect: true }, function(err, db) {
-			if(err) throw err;
-			var views = db.collection("views");
-			var batch = db.collection("views").initializeUnorderedBulkOp();
-			//for(i=0;i<ci.length;ci++){
-			while(ci.length>0){
-				var id = ci.splice(0,1)[0];
-				console.log(id);
-				var vid = id._id;
-				(function(vid){
-		        	
-		        })(vid);
-			}
-		});
-	}
-	return d.promise;
-}*/
-
 // function is mandatory, has access to the req object for extra details
 // it MUST return a promise, use whatever
 function acceptData(message) {
@@ -132,18 +106,18 @@ function acceptData(message) {
         //console.log(message.body);
         count++;
         if (message.body.note == "cache") {
-            console.log("Got Cache Data");
+            console.log("Got Final Signal from Cache Data");
             //heirarchy = db1.loadCollection( {name:"children"} )
-            cacheIds = message.body.cache //,users
+            //cacheIds = message.body.cache //,users
         } else {
             console.log("Got Users data");
             users = message.body.users
         }
     }
     //console.log(count);
-    if (count == 1) {
+    if (count == 2) {
         //start generating summary
-        console.log("Starting the Summary");
+        console.log("Starting the Summary @ "+Date.now());
         count = 0;
         Db.MongoClient.connect(databaseUrl, {
             auto_reconnect: true
@@ -159,7 +133,8 @@ function acceptData(message) {
                 async.eachLimit(cacheIds, 800, processSummaryAndSaveViews, function(err) {
                     console.log("Saving Views");
                     batch.execute(function(err, results) {
-                        console.log("Views Generated");
+                        console.log("Views Generated @"+Date.now());
+                        d.resolve({msg:"Done"});
                     });
                 });
             });
