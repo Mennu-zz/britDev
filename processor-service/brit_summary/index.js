@@ -62,6 +62,8 @@ function processSummaryAndSaveViews(vid, callback) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
+				                        batch = null;
+				                        batch = db.collection("finalViews").initializeUnorderedBulkOp();
 				                        callback();
 				                    });
 				                } else {
@@ -93,6 +95,8 @@ function processSummaryAndSaveViews(vid, callback) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
+		                    batch = null;
+		                    batch = db.collection("finalViews").initializeUnorderedBulkOp();
 		                    return callback();
 		                })
 		            } else {
