@@ -19,7 +19,7 @@ function processSummaryAndSaveViews(vid, cb) {
 	        view = v;
 	        processCount++;
 	        console.log("Got the View "+view._id);
-	        //console.log("Step 1 :"+view._id);
+	        console.log("Step 1 :"+view._id);
 	        if (user) {
 	            view.processedData.username = user["staff-name"]
 	            view.processedData.email = user["staff-email"]
@@ -40,7 +40,7 @@ function processSummaryAndSaveViews(vid, cb) {
 	                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
 	            }
 	        }
-	        //console.log("Step 2 :"+view._id);
+	        console.log("Step 2 :"+view._id);
 	        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
 	            views.find({
 	                _id: {
@@ -53,7 +53,7 @@ function processSummaryAndSaveViews(vid, cb) {
 	            	function processReporteeItem(err,item){
 	            		if(item === null) {
 					      // All done!
-					     	//console.log("Step 4 :"+view._id);
+					     	console.log("Step 4 :"+view._id);
 	                    	console.log(view._id + " saving to batch execution. :"+processCount);
 			                batch.insert(view);
 			                if (processCount > 20000) {
@@ -123,7 +123,7 @@ function processSummaryAndSaveViews(vid, cb) {
 	            	}
 	            });*/
 	        } else {
-	        	//console.log("Step 3.1 :"+view._id);
+	        	console.log("Step 3.1 :"+view._id);
 	        	console.log(view._id + " saving to batch execution. :"+processCount);
 	            batch.insert(view);
 	            if (processCount > 20000) {
