@@ -40,6 +40,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		            if (user.level == 'distributor') {
 		                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
 		            }
+		            view.reporteeNames = "removed";
 		        }
 		        console.log("Step 2 :"+view._id);
 		        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
