@@ -1,6 +1,6 @@
 var Q = require('q'),
     processCount = 0,count=0,
-    cacheIds, users, views, batch, async = require('async');
+    cacheIds, users, views, batch = null, async = require('async');
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
 var Db = require('mongodb');
 var heirarchy;
@@ -57,7 +57,7 @@ function processSummaryAndSaveViews(vid, callback) {
 						     	console.log("Step 4 :"+view._id);
 		                    	console.log(view._id + " saving to batch execution. :"+processCount);
 				                batch.insert(view);
-				                if (processCount > 8000) {
+				                if (processCount > 3000) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
@@ -66,20 +66,21 @@ function processSummaryAndSaveViews(vid, callback) {
 				                } else {
 				                    return callback();
 				                }
+						    }else{
+						    	tmpcache = item;
+			            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
+			                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+			                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+			                    sales.push(tmpcache.tmpSummary.sales.BCR);
+			                    sales.push(tmpcache.tmpSummary.sales.Dairy);
+			                    dist.push(tmpcache.tmpSummary.dist.ECO);
+			                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
+			                    edge.push(tmpcache.tmpSummary.edge.TLSD);
+			                    view.processedData.body[1].content[0].data.push(sales);
+			                    view.processedData.body[1].content[1].data.push(dist);
+			                    view.processedData.body[1].content[2].data.push(edge);
+			                    resCursor.nextObject(processReporteeItem);
 						    }
-						    tmpcache = item;
-		            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
-		                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-		                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-		                    sales.push(tmpcache.tmpSummary.sales.BCR);
-		                    sales.push(tmpcache.tmpSummary.sales.Dairy);
-		                    dist.push(tmpcache.tmpSummary.dist.ECO);
-		                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
-		                    edge.push(tmpcache.tmpSummary.edge.TLSD);
-		                    view.processedData.body[1].content[0].data.push(sales);
-		                    view.processedData.body[1].content[1].data.push(dist);
-		                    view.processedData.body[1].content[2].data.push(edge);
-		                    resCursor.nextObject(processReporteeItem);
 		            	}
 		            	resCursor.nextObject(processReporteeItem);
 		            });
@@ -127,7 +128,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		        	console.log("Step 3.1 :"+view._id);
 		        	console.log(view._id + " saving to batch execution. :"+processCount);
 		            batch.insert(view);
-		            if (processCount > 8000) {
+		            if (processCount > 3000) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
@@ -168,19 +169,19 @@ function acceptData(message) {
         Db.MongoClient.connect(databaseUrl, {
             auto_reconnect: true
         }, function(err, db) {
+        	batch = db.collection("finalViews").initializeUnorderedBulkOp();
             db.collection('views').find({}, {
                 _id: 1
             }).toArray(function(err, data) {
                 cacheIds = data;
                 console.log("Got the ids, total : " + cacheIds.length);
                 views = db.collection("views");
-                batch = db.collection("finalViews").initializeUnorderedBulkOp();
-
                 async.eachSeries(cacheIds, processSummaryAndSaveViews, function(err) {
                     console.log("Saving Views");
                     batch.execute(function(err, results) {
                         console.log("Views Generated @"+Date.now());
                         d.resolve({msg:"Done"});
+                        db.close();
                     });
                 });
             });
