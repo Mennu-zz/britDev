@@ -10,7 +10,7 @@ var processor = Processor.subscribe({
 
 
 
-function processSummaryAndSaveViews(vid, cb) {
+function processSummaryAndSaveViews(vid, callback) {
     (function(vid){
     	user = users[vid._id] || {};
 	    views.findOne({
@@ -61,10 +61,10 @@ function processSummaryAndSaveViews(vid, cb) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
-				                        cb();
+				                        return callback();
 				                    });
 				                } else {
-				                    cb();
+				                    return callback();
 				                }
 						    }
 						    tmpcache = item;
@@ -131,10 +131,10 @@ function processSummaryAndSaveViews(vid, cb) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
-		                    cb();
+		                    return callback();
 		                })
 		            } else {
-		                cb();
+		                return callback();
 		            }
 		        }
 		    })(v);
@@ -176,7 +176,7 @@ function acceptData(message) {
                 views = db.collection("views");
                 batch = db.collection("finalViews").initializeUnorderedBulkOp();
 
-                async.eachLimit(cacheIds, 800, processSummaryAndSaveViews, function(err) {
+                async.series(cacheIds, processSummaryAndSaveViews, function(err) {
                     console.log("Saving Views");
                     batch.execute(function(err, results) {
                         console.log("Views Generated @"+Date.now());
