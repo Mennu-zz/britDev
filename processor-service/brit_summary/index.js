@@ -1,4 +1,4 @@
-var Q = require('q'),
+var Q = require('q'),db,
     processCount = 0,count=0,
     cacheIds, users, views, batch = null, async = require('async');
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
@@ -63,7 +63,7 @@ function processSummaryAndSaveViews(vid, callback) {
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
 				                        batch = null;
-				                        batch = db.collection("finalViews").initializeUnorderedBulkOp();
+				                        batch = _db.collection("finalViews").initializeUnorderedBulkOp();
 				                        callback();
 				                    });
 				                } else {
@@ -96,7 +96,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
 		                    batch = null;
-		                    batch = db.collection("finalViews").initializeUnorderedBulkOp();
+		                    batch = _db.collection("finalViews").initializeUnorderedBulkOp();
 		                    return callback();
 		                })
 		            } else {
@@ -134,6 +134,7 @@ function acceptData(message) {
         Db.MongoClient.connect(databaseUrl, {
             auto_reconnect: true
         }, function(err, db) {
+        	_db = db;
         	batch = db.collection("finalViews").initializeUnorderedBulkOp();
             db.collection('views').find({}, {
                 _id: 1
