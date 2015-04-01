@@ -57,7 +57,7 @@ function processSummaryAndSaveViews(vid, callback) {
 						     	console.log("Step 4 :"+view._id);
 		                    	console.log(view._id + " saving to batch execution. :"+processCount);
 				                batch.insert(view);
-				                if (processCount > 20000) {
+				                if (processCount > 8000) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
@@ -127,7 +127,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		        	console.log("Step 3.1 :"+view._id);
 		        	console.log(view._id + " saving to batch execution. :"+processCount);
 		            batch.insert(view);
-		            if (processCount > 20000) {
+		            if (processCount > 8000) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
@@ -176,7 +176,7 @@ function acceptData(message) {
                 views = db.collection("views");
                 batch = db.collection("finalViews").initializeUnorderedBulkOp();
 
-                async.series(cacheIds, processSummaryAndSaveViews, function(err) {
+                async.eachSeries(cacheIds, processSummaryAndSaveViews, function(err) {
                     console.log("Saving Views");
                     batch.execute(function(err, results) {
                         console.log("Views Generated @"+Date.now());
