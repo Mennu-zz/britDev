@@ -16,126 +16,128 @@ function processSummaryAndSaveViews(vid, cb) {
 	    views.findOne({
 	        _id: vid._id
 	    }, function(err, v) {
-	        view = v;
-	        processCount++;
-	        console.log("Got the View "+view._id);
-	        console.log("Step 1 :"+view._id);
-	        if (user) {
-	            view.processedData.username = user["staff-name"]
-	            view.processedData.email = user["staff-email"]
-	            view.processedData.level = user.level
-	            view.processedData.code = user.code
-	            view.processedData.primarySales = Math.ceil(Number(user.primarySales) / 1000)
-	            view.processedData.isSalesManOnGprs = user.is_sm_on_gprs
-	            view.processedData.firstHalfAttended = user.first_half_attend
-	            view.processedData.firstHalfOrders = user.first_half_orders
-	            view.processedData.secondHalfAttended = user.sec_half_attend
-	            view.processedData.secondHalfOrders = user.sec_half_orders
-	            view.processedData.isProcessed = false
-	            view.processedData.key = user.level + ":" + user.code
-	            view.processedData.parentCode = user["parent-code"]
-	            view.processedData.parentLevel = user["parent-level"]
-	            view.processedData.name = user["name"]
-	            if (user.level == 'distributor') {
-	                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
-	            }
-	        }
-	        console.log("Step 2 :"+view._id);
-	        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
-	            views.find({
-	                _id: {
-	                    $in: view.reporteeQuery
-	                }
-	            }, {
-	                _id: 1,
-	                "tmpSummary": 1
-	            },function(err,resCursor){
-	            	function processReporteeItem(err,item){
-	            		if(item === null) {
-					      // All done!
-					     	console.log("Step 4 :"+view._id);
-	                    	console.log(view._id + " saving to batch execution. :"+processCount);
-			                batch.insert(view);
-			                if (processCount > 20000) {
-			                    processCount=0;
-			                    batch.execute(function(err, res) {
-			                        if (err) {throw err;}
-			                        cb();
-			                    });
-			                } else {
-			                    cb();
-			                }
-					    }
-					    tmpcache = item;
-	            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
-	                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-	                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-	                    sales.push(tmpcache.tmpSummary.sales.BCR);
-	                    sales.push(tmpcache.tmpSummary.sales.Dairy);
-	                    dist.push(tmpcache.tmpSummary.dist.ECO);
-	                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
-	                    edge.push(tmpcache.tmpSummary.edge.TLSD);
-	                    view.processedData.body[1].content[0].data.push(sales);
-	                    view.processedData.body[1].content[1].data.push(dist);
-	                    view.processedData.body[1].content[2].data.push(edge);
-	                    resCursor.nextObject(processReporteeItem);
-	            	}
-	            	resCursor.nextObject(processReporteeItem);
-	            });
-	            /*views.find({
-	                _id: {
-	                    $in: view.reporteeQuery
-	                }
-	            }, {
-	                _id: 1,
-	                "tmpSummary": 1
-	            }).toArray(function(err, rv) {
-	            	console.log(rv);
-	            	console.log("Step 3 :"+view._id);
-	            	while(rv.length>0){
-	            		tmpcache = rv.shift();
-	            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
-	                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-	                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-	                    sales.push(tmpcache.tmpSummary.sales.BCR);
-	                    sales.push(tmpcache.tmpSummary.sales.Dairy);
-	                    dist.push(tmpcache.tmpSummary.dist.ECO);
-	                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
-	                    edge.push(tmpcache.tmpSummary.edge.TLSD);
-	                    view.processedData.body[1].content[0].data.push(sales);
-	                    view.processedData.body[1].content[1].data.push(dist);
-	                    view.processedData.body[1].content[2].data.push(edge);
-	                	
-	                    if(rv.length==0){
-	                    	console.log("Step 4 :"+view._id);
-	                    	console.log(view._id + " saving to batch execution. :"+processCount);
-			                batch.insert(view);
-			                if (processCount > 25000) {
-			                    processCount=0;
-			                    batch.execute(function(err, res) {
-			                        if (err) {throw err;}
-			                        cb();
-			                    });
-			                } else {
-			                    cb();
-			                }	
-	                    }
-	            	}
-	            });*/
-	        } else {
-	        	console.log("Step 3.1 :"+view._id);
-	        	console.log(view._id + " saving to batch execution. :"+processCount);
-	            batch.insert(view);
-	            if (processCount > 20000) {
-	            	processCount = 0;
-	                batch.execute(function(err, res) {
-	                    if (err) {console.log(err);}
-	                    cb();
-	                })
-	            } else {
-	                cb();
-	            }
-	        }
+	    	(function(v){
+	    		view = v;
+		        processCount++;
+		        console.log("Got the View "+view._id);
+		        console.log("Step 1 :"+view._id);
+		        if (user) {
+		            view.processedData.username = user["staff-name"]
+		            view.processedData.email = user["staff-email"]
+		            view.processedData.level = user.level
+		            view.processedData.code = user.code
+		            view.processedData.primarySales = Math.ceil(Number(user.primarySales) / 1000)
+		            view.processedData.isSalesManOnGprs = user.is_sm_on_gprs
+		            view.processedData.firstHalfAttended = user.first_half_attend
+		            view.processedData.firstHalfOrders = user.first_half_orders
+		            view.processedData.secondHalfAttended = user.sec_half_attend
+		            view.processedData.secondHalfOrders = user.sec_half_orders
+		            view.processedData.isProcessed = false
+		            view.processedData.key = user.level + ":" + user.code
+		            view.processedData.parentCode = user["parent-code"]
+		            view.processedData.parentLevel = user["parent-level"]
+		            view.processedData.name = user["name"]
+		            if (user.level == 'distributor') {
+		                view.processedData.awLastSyncDatetime = user["AW_last_sync_datetime"]
+		            }
+		        }
+		        console.log("Step 2 :"+view._id);
+		        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
+		            views.find({
+		                _id: {
+		                    $in: view.reporteeQuery
+		                }
+		            }, {
+		                _id: 1,
+		                "tmpSummary": 1
+		            },function(err,resCursor){
+		            	function processReporteeItem(err,item){
+		            		if(item === null) {
+						      // All done!
+						     	console.log("Step 4 :"+view._id);
+		                    	console.log(view._id + " saving to batch execution. :"+processCount);
+				                batch.insert(view);
+				                if (processCount > 20000) {
+				                    processCount=0;
+				                    batch.execute(function(err, res) {
+				                        if (err) {throw err;}
+				                        cb();
+				                    });
+				                } else {
+				                    cb();
+				                }
+						    }
+						    tmpcache = item;
+		            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
+		                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+		                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+		                    sales.push(tmpcache.tmpSummary.sales.BCR);
+		                    sales.push(tmpcache.tmpSummary.sales.Dairy);
+		                    dist.push(tmpcache.tmpSummary.dist.ECO);
+		                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
+		                    edge.push(tmpcache.tmpSummary.edge.TLSD);
+		                    view.processedData.body[1].content[0].data.push(sales);
+		                    view.processedData.body[1].content[1].data.push(dist);
+		                    view.processedData.body[1].content[2].data.push(edge);
+		                    resCursor.nextObject(processReporteeItem);
+		            	}
+		            	resCursor.nextObject(processReporteeItem);
+		            });
+		            /*views.find({
+		                _id: {
+		                    $in: view.reporteeQuery
+		                }
+		            }, {
+		                _id: 1,
+		                "tmpSummary": 1
+		            }).toArray(function(err, rv) {
+		            	console.log(rv);
+		            	console.log("Step 3 :"+view._id);
+		            	while(rv.length>0){
+		            		tmpcache = rv.shift();
+		            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
+		                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+		                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
+		                    sales.push(tmpcache.tmpSummary.sales.BCR);
+		                    sales.push(tmpcache.tmpSummary.sales.Dairy);
+		                    dist.push(tmpcache.tmpSummary.dist.ECO);
+		                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
+		                    edge.push(tmpcache.tmpSummary.edge.TLSD);
+		                    view.processedData.body[1].content[0].data.push(sales);
+		                    view.processedData.body[1].content[1].data.push(dist);
+		                    view.processedData.body[1].content[2].data.push(edge);
+		                	
+		                    if(rv.length==0){
+		                    	console.log("Step 4 :"+view._id);
+		                    	console.log(view._id + " saving to batch execution. :"+processCount);
+				                batch.insert(view);
+				                if (processCount > 25000) {
+				                    processCount=0;
+				                    batch.execute(function(err, res) {
+				                        if (err) {throw err;}
+				                        cb();
+				                    });
+				                } else {
+				                    cb();
+				                }	
+		                    }
+		            	}
+		            });*/
+		        } else {
+		        	console.log("Step 3.1 :"+view._id);
+		        	console.log(view._id + " saving to batch execution. :"+processCount);
+		            batch.insert(view);
+		            if (processCount > 20000) {
+		            	processCount = 0;
+		                batch.execute(function(err, res) {
+		                    if (err) {console.log(err);}
+		                    cb();
+		                })
+		            } else {
+		                cb();
+		            }
+		        }
+		    })(v);
 	    });
     })(vid);
 }
