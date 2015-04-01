@@ -50,6 +50,7 @@ function processSummaryAndSaveViews(vid, cb) {
 	                _id: 1,
 	                "tmpSummary": 1
 	            }).toArray(function(err, rv) {
+	            	console.log(rv);
 	            	console.log("Step 3 :"+view._id);
 	            	while(rv.length>0){
 	            		tmpcache = rv.shift();
