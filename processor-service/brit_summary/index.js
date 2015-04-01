@@ -19,8 +19,8 @@ function processSummaryAndSaveViews(vid, callback) {
 	    	(function(v){
 	    		view = v;
 		        processCount++;
-		        console.log("Got the View "+view._id);
-		        console.log("Step 1 :"+view._id);
+		        //console.log("Got the View "+view._id);
+		        //console.log("Step 1 :"+view._id);
 		        if (user) {
 		            view.processedData.username = user["staff-name"]
 		            view.processedData.email = user["staff-email"]
@@ -42,7 +42,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		            }
 		            view.reporteeNames = "removed";
 		        }
-		        console.log("Step 2 :"+view._id);
+		        //console.log("Step 2 :"+view._id);
 		        if (view.reporteeQuery && view.reporteeQuery.length > 0) {
 		            views.find({
 		                _id: {
@@ -55,17 +55,17 @@ function processSummaryAndSaveViews(vid, callback) {
 		            	function processReporteeItem(err,item){
 		            		if(item === null) {
 						      // All done!
-						     	console.log("Step 4 :"+view._id);
+				//		     	console.log("Step 4 :"+view._id);
 		                    	console.log(view._id + " saving to batch execution. :"+processCount);
 				                batch.insert(view);
-				                if (processCount > 3000) {
+				                if (processCount > 2999) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
-				                        return callback();
+				                        callback();
 				                    });
 				                } else {
-				                    return callback();
+				                    callback();
 				                }
 						    }else{
 						    	tmpcache = item;
@@ -85,51 +85,11 @@ function processSummaryAndSaveViews(vid, callback) {
 		            	}
 		            	resCursor.nextObject(processReporteeItem);
 		            });
-		            /*views.find({
-		                _id: {
-		                    $in: view.reporteeQuery
-		                }
-		            }, {
-		                _id: 1,
-		                "tmpSummary": 1
-		            }).toArray(function(err, rv) {
-		            	console.log(rv);
-		            	console.log("Step 3 :"+view._id);
-		            	while(rv.length>0){
-		            		tmpcache = rv.shift();
-		            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
-		                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-		                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
-		                    sales.push(tmpcache.tmpSummary.sales.BCR);
-		                    sales.push(tmpcache.tmpSummary.sales.Dairy);
-		                    dist.push(tmpcache.tmpSummary.dist.ECO);
-		                    dist.push(tmpcache.tmpSummary.dist["New Outlets"]);
-		                    edge.push(tmpcache.tmpSummary.edge.TLSD);
-		                    view.processedData.body[1].content[0].data.push(sales);
-		                    view.processedData.body[1].content[1].data.push(dist);
-		                    view.processedData.body[1].content[2].data.push(edge);
-		                	
-		                    if(rv.length==0){
-		                    	console.log("Step 4 :"+view._id);
-		                    	console.log(view._id + " saving to batch execution. :"+processCount);
-				                batch.insert(view);
-				                if (processCount > 25000) {
-				                    processCount=0;
-				                    batch.execute(function(err, res) {
-				                        if (err) {throw err;}
-				                        cb();
-				                    });
-				                } else {
-				                    cb();
-				                }	
-		                    }
-		            	}
-		            });*/
 		        } else {
-		        	console.log("Step 3.1 :"+view._id);
+		        //	console.log("Step 3.1 :"+view._id);
 		        	console.log(view._id + " saving to batch execution. :"+processCount);
 		            batch.insert(view);
-		            if (processCount > 3000) {
+		            if (processCount > 2999) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
