@@ -33,7 +33,7 @@ function processSummaryAndSaveViews(vid, callback) {
 		            view.processedData.secondHalfAttended = user.sec_half_attend
 		            view.processedData.secondHalfOrders = user.sec_half_orders
 		            view.processedData.isProcessed = false
-		            view.processedData.key = user.level + ":" + user.code
+		            //view.processedData.key = user.level + ":" + user.code
 		            view.processedData.parentCode = user["parent-code"]
 		            view.processedData.parentLevel = user["parent-level"]
 		            view.processedData.name = user["name"]
