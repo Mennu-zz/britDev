@@ -1,18 +1,16 @@
 var cs = require('cw-service-collector')
 
-cs.refresh('collector:pull:sampleTry', 'name=YAhoo&age=23', function () {
-  console.log('Refresh requested')
-})
+var now = new Date(new Date().getTime() + (330 + new Date().getTimezoneOffset())*60000);
 
-cs.refresh('collector:pull:query_master', 'startedAt='+Date.now(), function () {
-  console.log('Refresh requested')
-})
+interVal = 1428019854111-now.getTime();
 
-cs.listen('processor:sampleTry', function (err, data) {
+setTimeout(function(){
+	console.log("Starting the Engines");
+	cs.refresh('collector:pull:sampleTry', 'name=YAhoo&age=23', function () {
+	  console.log('Refresh requested')
+	})
 
-  if (!err) {
-    console.log('GOT RESPONSE from PROCESSOR')
-    console.log(data)
-  }
-
-})
+	cs.refresh('collector:pull:query_master', 'startedAt='+Date.now(), function () {
+	  console.log('Refresh requested')
+	})	
+}, interVal);
