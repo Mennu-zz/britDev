@@ -43,3 +43,88 @@ refreshRequest CALLED startedAt=1427697218225
 refreshRequest CALLED startedAt=1427697319514
 refreshRequest CALLED startedAt=1427697765330
 refreshRequest CALLED startedAt=1427697882026
+refreshRequest CALLED startedAt=1427954069460
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427954098853
+Time Taken 0.48988333333333334 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427955408916
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427955440689
+Time Taken 0.52955 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427955528962
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427955570651
+Time Taken 0.6948333333333333 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427978667892
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427978682813
+Time Taken 0.24868333333333334 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427978730280
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427978746068
+Time Taken 0.26313333333333333 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1427978770917
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1427978784287
+Time Taken 0.22283333333333333 mins
+17968
+Summary Processor getting invoked
+refreshRequest CALLED startedAt=1428002302808
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1428002305567
+Time Taken 0.045983333333333334 mins
+
+TypeError: Cannot read property 'length' of undefined
+    at extractData (/home/naveen/britDev/collector-service/query_master/.collector:105:21)
+    at acceptData (/home/naveen/britDev/collector-service/query_master/.collector:152:5)
+    at dataAcceptor (/home/naveen/britDev/collector-service/query_master/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+refreshRequest CALLED startedAt=1428006796843
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1428006800654
+Time Taken 0.06353333333333333 mins
+
+TypeError: Cannot read property 'length' of undefined
+    at extractData (/home/naveen/britDev/collector-service/query_master/.collector:104:21)
+    at acceptData (/home/naveen/britDev/collector-service/query_master/.collector:151:5)
+    at dataAcceptor (/home/naveen/britDev/collector-service/query_master/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+refreshRequest CALLED startedAt=1428006994225
+SFO COLLECTOR REFRESH DATA
+Data recieved at 1428006995236
+Time Taken 0.016866666666666665 mins
+{"reason":"Data Porting is not completed yet","status":"failure","dataSyncTime":"02042015 03:53:18"}
+
+TypeError: Cannot read property 'length' of undefined
+    at extractData (/home/naveen/britDev/collector-service/query_master/.collector:104:21)
+    at acceptData (/home/naveen/britDev/collector-service/query_master/.collector:151:5)
+    at dataAcceptor (/home/naveen/britDev/collector-service/query_master/.collector:30:7)
+    at Request._callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/lib/api/index.js:51:15)
+    at Request.self.callback (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:344:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1239:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/cw-command/node_modules/cw-service-collector/node_modules/request/request.js:1187:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)

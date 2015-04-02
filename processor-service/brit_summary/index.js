@@ -1,7 +1,7 @@
-var Q = require('q'),db,
-    processCount = 0,count=0,
+var Q = require('q'),nodemailer = require('nodemailer'),db,
+    processCount = 0,startTime,count=0,
     cacheIds, users, views, batch = null, async = require('async');
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
 var Db = require('mongodb');
 var heirarchy;
 var processor = Processor.subscribe({
@@ -58,12 +58,12 @@ function processSummaryAndSaveViews(vid, callback) {
 				//		     	console.log("Step 4 :"+view._id);
 		                    	console.log(view._id + " saving to batch execution. :"+processCount);
 				                batch.insert(view);
-				                if (processCount > 2999) {
+				                if (processCount > 1599) {
 				                    processCount=0;
 				                    batch.execute(function(err, res) {
 				                        if (err) {throw err;}
 				                        batch = null;
-				                        batch = _db.collection("finalViews").initializeUnorderedBulkOp();
+				                        batch = _db.collection("tmpViews").initializeUnorderedBulkOp();
 				                        callback();
 				                    });
 				                } else {
@@ -71,6 +71,7 @@ function processSummaryAndSaveViews(vid, callback) {
 				                }
 						    }else{
 						    	tmpcache = item;
+						    	console.log(item);
 			            		sales = [user["name"] || view.reporteeNames && view.reporteeNames[tmpcache._id] || ""];
 			                    dist = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
 			                    edge = [user["name"] || view.reporteeNames &&  view.reporteeNames[tmpcache._id] || ""];
@@ -91,12 +92,12 @@ function processSummaryAndSaveViews(vid, callback) {
 		        //	console.log("Step 3.1 :"+view._id);
 		        	console.log(view._id + " saving to batch execution. :"+processCount);
 		            batch.insert(view);
-		            if (processCount > 2999) {
+		            if (processCount > 1599) {
 		            	processCount = 0;
 		                batch.execute(function(err, res) {
 		                    if (err) {console.log(err);}
 		                    batch = null;
-		                    batch = _db.collection("finalViews").initializeUnorderedBulkOp();
+		                    batch = _db.collection("tmpViews").initializeUnorderedBulkOp();
 		                    return callback();
 		                })
 		            } else {
@@ -108,6 +109,44 @@ function processSummaryAndSaveViews(vid, callback) {
     })(vid);
 }
 
+function prepareAndSendMail(){
+	var d = Q.defer();
+	var transporter = nodemailer.createTransport({
+	    service: 'Gmail',
+	    auth: {
+	        user: 'naveenmeherch@gmail.com',
+	        pass: 'mennunav'
+	    }
+	});
+	_db.collection("cpStatus").find({},function(err,doc){
+	
+		var table = "<b>Please find the Brit Exporter status below.</b><br><br><table><tr><td >Tasks</td><td>Start Time</td><td>End Time</td><td>Time Taken</td></tr>";
+		table+='<tr><td >Collected Data from the Api and partial processed.</td><td>'+new Date(doc.startedAt)+'</td><td>'+new Date(startTime)+'</td><td>'+(doc.endTime-startTime)/1000+' mins </td></tr>';
+		table+='<tr><td >Renderiing Views Completed.</td><td>'+new Date(startTime)+'</td><td>'+new Date()+'</td><td>'+(Date.now()-startTime)/1000+' mins </td></tr>';
+		table+='</table>';
+		// setup e-mail data with unicode symbols
+		var mailOptions = {
+		    from: 'Test Space', // sender address
+		    to: 'naveen.meher@incture.com', // list of receivers
+		    subject: '✔ Brit Test Run Status', // Subject line
+		    html:  table// html body
+		};
+	//startTime
+		// send mail with defined transport object
+		transporter.sendMail(mailOptions, function(error, info){
+		    if(error){
+		        console.log(error);
+		        d.resolve();
+		    }else{
+		        console.log('Message sent: ' + info.response);
+		        d.resolve();
+		    }
+		});
+
+	})
+	
+	return d.promise;
+}
 
 // function is mandatory, has access to the req object for extra details
 // it MUST return a promise, use whatever
@@ -116,7 +155,7 @@ function acceptData(message) {
     var d = Q.defer()
     if (message.body && message.body.final) {
         //console.log(message.body);
-        count++;
+       // count++;
         if (message.body.note == "cache") {
             console.log("Got Final Signal from Cache Data");
             //heirarchy = db1.loa dCollection( {name:"children"} )
@@ -124,18 +163,23 @@ function acceptData(message) {
         } else {
             console.log("Got Users data");
             users = message.body.users
+	console.log(users)
         }
+    }else{
+    	d.resolve();
     }
     //console.log(count);
-    if (count == 1) {
+    if (count == 2) {
         //start generating summary
         console.log("Starting the Summary @ "+Date.now());
+        startTime = Date.now();
         count = 0;
         Db.MongoClient.connect(databaseUrl, {
             auto_reconnect: true
         }, function(err, db) {
         	_db = db;
-        	batch = db.collection("finalViews").initializeUnorderedBulkOp();
+        	
+			batch = db.collection("tmpViews").initializeUnorderedBulkOp();
             db.collection('views').find({}, {
                 _id: 1
             }).toArray(function(err, data) {
@@ -146,13 +190,17 @@ function acceptData(message) {
                     console.log("Saving Views");
                     batch.execute(function(err, results) {
                         console.log("Views Generated @"+Date.now());
-                        d.resolve({msg:"Done"});
-                        db.close();
-                    });
+                        	prepareAndSendMail().then(function(){
+                        		db.close();
+		                        d.resolve({msg:"Done"});
+                        	});
+                        });
                 });
             });
         });
         //As this is the final call prepare the final status and send a mail ..zi!!!
+    }else{
+    	d.resolve();
     }
-    return d.promise
+    return d.promise;
 }

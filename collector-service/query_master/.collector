@@ -74,20 +74,20 @@ tempLevel = {
 //var db = new Db('cw-api', new Server('localhost', 27017),{safe: false, strict: false});
 var requestInterval = 5000 // 10 secs
 //var fetchUrl = "http://115.249.190.247:8080/uCLMS/salesData?APIKey=hgd832384234&backlogin=1&";
-
+//http://125.16.214.232:8080/uCLMS/salesData?APIKey=hgd832384234&backlogin=1&level=region&code=SCH2
 
     var collector = Collector.pull({
     flexible: true, // excdepr for scenario every field can be changed with subsqequent queries, defaults to false
     scenario: 'britannia-teams', // scenario
-    path: "http://115.249.190.247:8080/uCLMS/salesData", //path
+    path: "http://125.16.214.232:8080/uCLMS/salesData", //path
     method: 'get', // request method, default is get
     query: 'APIKey=hgd832384234&backlogin=1&query=masters', // any query params
-    body: ''
+    body: '',
+    timeout:120
   })
 
   // listen to "refreshRequest" for real-time queries
   collector.on('refreshRequest', function (params) { // collectorName is mandarory for refreshers
-
     // if required, check for conditions in params - for eg: caching
     console.log('refreshRequest CALLED', params)
      startedAt = new Date(parseInt(params.replace("startedAt=","")))
@@ -112,7 +112,7 @@ var requestInterval = 5000 // 10 secs
         if(user.salesUser == "true"){
           var tmpqm = user;
           tmpqm._id = user.level+":"+user.code
-          users[tmpqm.key] = tmpqm;
+          users[tmpqm._id] = tmpqm;
         }
         if(data.length==0){
           //batch.execute(function(err,result){
@@ -133,14 +133,17 @@ var requestInterval = 5000 // 10 secs
     var d = Q.defer()
     if(err){
       console.log("Error Occured");
-      console.log(err);
+      console.log(err.code);
+      if(err.code=="ETIMEDOUT"){
+      	console.log(headers);
+      }
       d.reject({error : err})
     }
     console.log('SFO COLLECTOR REFRESH DATA');
     //sample level will be replaced through the query parameters
     console.log("Data recieved at "+Date.now())
     console.log("Time Taken "+(Date.now()-startedAt.getTime())/60000+" mins");
-    //console.log(message.body)
+    console.log(message.body)
     //console.log(message.body["data"])
 
     var data = JSON.parse(message.body)["data"];
@@ -148,11 +151,23 @@ var requestInterval = 5000 // 10 secs
     extractData(data).then(function(records){
       console.log("Summary Processor getting invoked");
       //console.log(records);
-      d.resolve({
-        id: Date.now(),
-        users: users,
-        final:true
-      })
+      Db.MongoClient.connect(databaseUrl, {
+            auto_reconnect: true
+        }, function(err, db) {
+
+        	db.collection("cpStatus").insert({
+        					title:"Collector started data extraction.",
+        					from:"extractionCollector",
+        					startedAt:startedAt,
+        					endTime:new Date()
+        				},function(err,res){
+						    d.resolve({
+						        id: Date.now(),
+						        users: users,
+						        final:true
+						      });
+        				});
+        });
     });
 
     return d.promise;

@@ -1,6 +1,6 @@
 var Q = require('q'),async = require("async"),outlet=0;
 var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
-var Db = require('mongodb'),
+var Db = require('mongodb'),startId,
 tempLevel = {
   "region":"national",
   "area":"region",
@@ -19,7 +19,7 @@ var requestInterval = 5000 // 10 secs
     var collector = Collector.pull({
     flexible: true, // excdepr for scenario every field can be changed with subsqequent queries, defaults to false
     scenario: 'britannia-teams', // scenario
-    path: "http://115.249.190.247:8080/uCLMS/salesData", //path
+    path: "http://125.16.214.232:8080/uCLMS/salesData", //path
     method: 'get', // request method, default is get
     query: 'APIKey=hgd832384234&backlogin=1&level=national&code=CORP', // any query params
     body: ''
@@ -27,11 +27,22 @@ var requestInterval = 5000 // 10 secs
 
   // listen to "refreshRequest" for real-time queries
   collector.on('refreshRequest', function (params) { // collectorName is mandarory for refreshers
+  	Db.MongoClient.connect(databaseUrl, {
+            auto_reconnect: true
+        }, function(err, db) {
 
-    // if required, check for conditions in params - for eg: caching
-    console.log('refreshRequest CALLED', params)
-     
-    collector.request() // {} and collectorName mandarory for refreshers
+        	db.collection("cpStatus").insert({
+        					title:"Collector started data extraction.",
+        					from:"extractionCollector",
+        					startedAt:Date.now()
+        				},function(err,res){
+    						// if required, check for conditions in params - for eg: caching
+						    console.log('refreshRequest CALLED', params)
+						     startId = res._id;
+						    collector.request() // {} and collectorName mandarory for refreshers    					
+        				});
+        });
+    
   })
 
 
@@ -78,8 +89,24 @@ var requestInterval = 5000 // 10 secs
     	//console.log("Removing outlet");
     	outlet--;
     	if(outlet == 0){
-	    	final = true;
-	    	console.log("Ending Extracting Collector @ "+Date.now());
+    		Db.MongoClient.connect(databaseUrl, {
+	            auto_reconnect: true
+	        }, function(err, db) {
+
+	        	db.collection("cpStatus").findAndModify({_id:startId},{endTime:Date.now()},function(err,doc){
+	        		final = true;
+	    			console.log("Ending Extracting Collector @ "+Date.now());
+	        		process.nextTick(function () {
+				    	//console.log("ticking "+outlet);
+				      d.resolve({
+				        id: Date.now(),
+				        body: message.body,
+				        final : final,
+				        parentLevel : parentLevel
+				      })
+				    })
+	        	});
+	        });
 	    }
     }
     else{
@@ -98,18 +125,19 @@ var requestInterval = 5000 // 10 secs
 		          });	
 	          }            
 	        }
-	    });	
-    }
-    process.nextTick(function () {
-    	//console.log("ticking "+outlet);
-      d.resolve({
-        id: Date.now(),
-        body: message.body,
-        final : final,
-        parentLevel : parentLevel
-      })
+	    });
+	    process.nextTick(function () {
+	    	//console.log("ticking "+outlet);
+	      d.resolve({
+	        id: Date.now(),
+	        body: message.body,
+	        final : final,
+	        parentLevel : parentLevel
+	      })
 
-    })
+	    })	
+    }
+    
 
     return d.promise
   }

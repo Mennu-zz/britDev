@@ -1,5 +1,5 @@
 var Q = require('q'),async = require('async'),britCache = [];//britCache = {};
-var databaseUrl = "mongodb://0.0.0.0:27017/cw-api1";
+var databaseUrl = "mongodb://0.0.0.0:27017/cw-api";
 var Db = require('mongodb'),loki = require('lokijs'),db1 = new loki('/home/naveen/heirarchy.json'),
 dateSuffix = [ "null","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "th", "th", "th", "th", "th", "th", "th", "th", "th","th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th","th", "st" ];
 
@@ -205,7 +205,7 @@ function processObjects(message){
     //Initializing a collection on bulk Operations, implemented from mongodb 2.2
     //Automatically splits the records in to 1000 each and operates over it.
 
-    var batch = db.collection("views").initializeUnorderedBulkOp();
+    var batch = db.collection("tmpViews").initializeUnorderedBulkOp();
     //console.log("Connected to Mongo");
 
     var codes = Object.keys(body);
@@ -306,6 +306,7 @@ function processObjects(message){
 function acceptData(message,headers) {
   var d = Q.defer()
   var body  = message.body;
+
   processObjects(message).then(function(msg){
     //console.log(msg);
     if(body.final){
