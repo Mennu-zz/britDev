@@ -19,7 +19,7 @@ var requestInterval = 5000 // 10 secs
     var collector = Collector.pull({
     flexible: true, // excdepr for scenario every field can be changed with subsqequent queries, defaults to false
     scenario: 'britannia-teams', // scenario
-    path: "http://125.16.214.232:8080/uCLMS/salesData", //path
+    path: "http://115.249.190.247:8080/uCLMS/salesData", //path
     method: 'get', // request method, default is get
     query: 'APIKey=hgd832384234&backlogin=1&level=national&code=CORP', // any query params
     body: ''

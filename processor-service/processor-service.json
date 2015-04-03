@@ -1,6 +1,6 @@
 {
   "signature": "AIIIIATR4646648",
-  "exclude": ["britannia_try","britannia-heirarchy", "sap-po","us-airports-lax","us-airports-sfo"],
+  "exclude": ["britannia-heirarchy", "sap-po","us-airports-lax","us-airports-sfo"],
   "collectorSignatures": ["GHJGAYTA567867GJH"],
   "collectorDb": {
     "host": "localhost",

@@ -118,7 +118,7 @@ function prepareAndSendMail(){
 	        pass: 'mennunav'
 	    }
 	});
-	_db.collection("cpStatus").find({},function(err,doc){
+	_db.collection("cpStatus").findOne({from:"extractionCollector"},function(err,doc){
 	
 		var table = "<b>Please find the Brit Exporter status below.</b><br><br><table><tr><td >Tasks</td><td>Start Time</td><td>End Time</td><td>Time Taken</td></tr>";
 		table+='<tr><td >Collected Data from the Api and partial processed.</td><td>'+new Date(doc.startedAt)+'</td><td>'+new Date(startTime)+'</td><td>'+(doc.endTime-startTime)/1000+' mins </td></tr>';
